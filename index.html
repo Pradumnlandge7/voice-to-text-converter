@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Voice-To-Text-by-Pradumn</title>
+    <meta name="description" content="voice recognition web page">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Designer2.png">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/cerulean/bootstrap.min.css" rel="stylesheet" integrity="sha384-0Mou2qXGeXK7k/Ue/a1hspEVcEP2zCpoQZw8/MPeUgISww+VmDJcy2ri9tX0a6iy" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #050505;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .align-center {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .app {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            transition: all 0.3s;
+        }
+
+        .input-single {
+            margin: 15px 0;
+        }
+
+        textarea {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            resize: none;
+        }
+
+        button {
+            margin: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-warning {
+            background-color: #ffc107;
+            color: black;
+        }
+
+        .recording-status {
+            font-weight: bold;
+            color: #dc3545;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid align-center">
+        <img src="Designer.png" alt="speech to voice converter" height="300">
+        <h1>Speech To Text Converter</h1>
+        <hr>
+        <h3 class="no-browser-support">Sorry, Your Browser Doesn't Support the Web Speech API. Try Opening This Demo In Google Chrome.</h3>
+        <div class="app">
+            <div class="row">
+                <div class="col-md-12 align-center">
+                    <div class="input-single">
+                        <textarea id="note-textarea" placeholder="Create a new note by typing or using voice recognition." rows="6"></textarea>
+                    </div>
+                    <button id="start-record-btn" class="btn btn-success" title="Start Recording">Start Recognition</button>
+                    <button id="pause-record-btn" class="btn btn-warning" title="Pause Recording">Pause Recognition</button>
+                </div>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /app -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
